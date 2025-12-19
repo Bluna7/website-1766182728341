@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Professional Website</title>
+  <link rel="stylesheet" href="ecommerce-styles.css">
+</head>
+<body>
+  <header>
+    <h1>My Professional Website</h1>
+  </header>
+  <main>
+    <!-- E-commerce content will be added here -->
+  
+    <!-- E-commerce Product Catalog -->
+    <section class="product-catalog" id="products">
+      <div class="container">
+        <h2>Our Products</h2>
+        <div class="products-grid" id="products-grid">
+          
+            <div class="product-card" data-product-id="0">
+              <img src="/placeholder.jpg" alt="Sample Product 1" class="product-image">
+              <div class="product-info">
+                <h3 class="product-name">Sample Product 1</h3>
+                <p class="product-description">High-quality product with great features</p>
+                <div class="product-price">$29.99</div>
+                <button class="add-to-cart-btn" onclick="addToCart(0, 'Sample Product 1', 29.99)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          
+            <div class="product-card" data-product-id="1">
+              <img src="/placeholder.jpg" alt="Sample Product 2" class="product-image">
+              <div class="product-info">
+                <h3 class="product-name">Sample Product 2</h3>
+                <p class="product-description">Premium product for discerning customers</p>
+                <div class="product-price">$49.99</div>
+                <button class="add-to-cart-btn" onclick="addToCart(1, 'Sample Product 2', 49.99)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          
+            <div class="product-card" data-product-id="2">
+              <img src="/placeholder.jpg" alt="Sample Product 3" class="product-image">
+              <div class="product-info">
+                <h3 class="product-name">Sample Product 3</h3>
+                <p class="product-description">Affordable option without compromising quality</p>
+                <div class="product-price">$19.99</div>
+                <button class="add-to-cart-btn" onclick="addToCart(2, 'Sample Product 3', 19.99)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button class="close-cart" onclick="toggleCart()">&times;</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-total">
+        <div class="total-amount">Total: $<span id="cart-total">0.00</span></div>
+        <button class="checkout-btn" onclick="initiatePayPalCheckout()">
+          Checkout with PayPal
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle" onclick="toggleCart()">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- PayPal Integration -->
+    <div id="paypal-button-container" style="display: none;"></div>
+    
+  </main>
+  <script src="ecommerce-script.js"></script>
+</body>
+</html>
